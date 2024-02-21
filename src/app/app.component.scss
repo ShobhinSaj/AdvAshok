@@ -1,8 +1,30 @@
-.navbar{
-    
-    box-shadow:         -2px 3px 8px rgb(44, 44, 44);
-    z-index:999;
+.navbar {
+
+    box-shadow: -2px 3px 8px rgb(44, 44, 44);
+    z-index: 999;
 }
-.inter{
-    font-family: 'Inter', sans-serif;
+.navbar-brand>img:hover{
+    
+    //filter: drop-shadow(-11px -1px 19px #20e0ee) drop-shadow( 7px 10px #70FF6E);
+    filter: drop-shadow(2px 1px 8px #20e0ee)drop-shadow(2px 1px 6px #4eff3e);
+}
+
+.nav-link:hover {
+    background-color: white;
+    cursor: pointer;
+    color: black;
+}
+
+.footer {
+    .footr_call {
+        background-color: black;
+
+        &:hover {
+            background-color: white;
+
+            >div {
+                color: black !important;
+            }
+        }
+    }
 }
