@@ -1,8 +1,34 @@
-.hero_img{
-    width: 40vw;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+.hero_img{
+    width: 34vw;
+}
+.btn-success{
+    background-color: white;
+    filter: drop-shadow(-5px 3px 2px #000000);
+    border: 2px solid black;
+    color: #000000;
+}
+.btn-success:hover{
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+// .hero_img_cntainr{
+//     backdrop-filter: (15px);
+//     background: rgba(88, 88, 88, 0.2);
+// }
 @media screen and (max-width:768px) {
     .hero_img{
         width: 80%;
+    }
+  
+    .hero_img_cntainr>div:nth-child(2){
+        text-align: center;
+        backdrop-filter: (30px);
+        background: rgba(214, 214, 214, 0.2);
+       
     }
 }

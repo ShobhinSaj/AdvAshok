@@ -1,5 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .navbar {
-
+    
     box-shadow: -2px 3px 8px rgb(44, 44, 44);
     z-index: 999;
 }
@@ -7,6 +12,9 @@
     
     //filter: drop-shadow(-11px -1px 19px #20e0ee) drop-shadow( 7px 10px #70FF6E);
     filter: drop-shadow(2px 1px 8px #20e0ee)drop-shadow(2px 1px 6px #4eff3e);
+}
+#navbarNavDropdown{
+    margin-right: 3%;
 }
 
 .nav-link:hover {
@@ -26,5 +34,10 @@
                 color: black !important;
             }
         }
+    }
+}
+@media screen and (max-width:768px) {
+    #navbarNavDropdown{
+        margin: 0;
     }
 }
