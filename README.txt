@@ -47,6 +47,27 @@ The following features are planned for the AdvAshok website:
  - Started working on HomePage Legal updates slider.
  
 ## Project Status 
+## Getting Started
+
+Follow these steps to set up and run the AdvAshok website locally:
+
+1. **Clone the Repository in Visual Studio Code:**
+git clone https://github.com/ShobhinSaj/AdvAshok.git
+
+2. **Open Terminal in VS Code:**
+- Navigate to the project folder in the terminal.
+
+3. **Install Dependencies:**
+npm install
+
+4. **Start the Application:**
+npm start
+
+5. **View in Browser:**
+- Open your browser and go to [http://localhost:4200](http://localhost:4200).
+
+## Project Status
+
 The project is currently in development, and regular updates will be made to enhance its features and functionality.
 
 Feel free to explore the code and contribute to the development of AdvAshok!
