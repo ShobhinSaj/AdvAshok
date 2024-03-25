@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { log } from 'console';
-import { Observable, of } from 'rxjs';
+
 import { NewsItem } from '../../data/updatesInterface';
 
 @Injectable({
