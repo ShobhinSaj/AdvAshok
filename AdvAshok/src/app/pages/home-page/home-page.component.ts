@@ -1,31 +1,23 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
-import { PLATFORM_ID, Inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { SliderComponentComponent } from '../../components/slider-component/slider-component.component'
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [CommonModule],
+  imports: [SliderComponentComponent],
   templateUrl: './home-page.component.html',
-  styleUrl: './home-page.component.scss'
+  styleUrls: ['./home-page.component.scss','../../../styles.scss']
 })
-export class HomePageComponent implements OnInit {
-  public screenWidth: any;  
-  public screenHeight: any;
-  constructor(@Inject(PLATFORM_ID) private platformId: Object){}
-  ngOnInit() {  
-    if (isPlatformBrowser(this.platformId)) {
-    this.screenWidth = window.innerWidth;  
-    this.screenHeight = window.innerHeight;  
-    }
-  }  
-  
-@HostListener('window:resize', ['$event'])  
-onResize(event) {  
-  if (isPlatformBrowser(this.platformId)) {
-  this.screenWidth = window.innerWidth;  
-  this.screenHeight = window.innerHeight;  
+export class HomePageComponent {
+  disclaimerAcknowledged: boolean = false;
+  constructor(private router: Router){}
+  OpenContact(){
+    this.router.navigate(['/contact']);
   }
-}  
+  OpenServices(){
+    this.router.navigate(['/services']);
+  }
 }
+

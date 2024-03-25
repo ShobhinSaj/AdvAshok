@@ -1,23 +1,111 @@
 <div>
-    <div class="row hero_img_cntainr mx-md-5">
-        <div class="col-12 col-md-6 mx-auto mx-md-0 text-center  p-4 ">
-            <img class="rounded-3 hero_img" src="../../../assets/hero_img_pic.png" 
-            
-            alt="hero_image">
-                     <!-- srcset="../../../assets/1000x1121/hero_img_pic.png 1000w,
-                    ../../../assets/2000x2242/hero_img_pic.png 2000w, 
-                    ../../../assets/4000x4484/hero_img_pic.png 4000w" -->
-        </div>
-        <div class="col-12 my-auto  col-md-6  inter p-md-4">
-            <h1 class="fw-bolder vw-5 " style="filter: drop-shadow(7px 1px 2px #9a9a9a);">BEST LEGAL ADVISOR FOR YOU</h1>
-            <h2 class="fw-bold vw-3 ">Taxation & Revenue Advocate</h2>
-            <div type="button" class="btn btn-success fw-bold  fs-4 p-2 my-4 mx-auto mx-md-0">
-                    Schedule a Consultation
+    
+    <section id="hero_content">
+        <div class="section_cntainer">
+            <div class="row gx-5">
+                <div class="col-12 col-md-6 hero_img_wrapper">
+                    <!-- <div class="container hero_img_cntainr"> -->
+                        <img class="rounded-4 object-fit-cover  " src="../../../assets/hero_img_2.jpg" alt="hero image" width="100%">
+                    <!-- </div> -->
+                </div>
+                <div class="col-12 col-md-6 hero_text_wrapper">
+                    <p class="hero_text">Adv Ashok : Championing Justice, One Client at a Time</p>
+                    <p>TAXATION & REVENUE ADVOCATE</p>
+                    <button (click)="OpenContact()" class="main_btn">
+                        Get Legal Assistance
+                    </button>
+                      
+                </div>
+
             </div>
         </div>
-    </div>  
-    <div class="law_slider_cntainr bg-dark-subtle container-fluid rounded-3">
-        <h2 class="text-center fw-medium  inter pt-2 ">Did You Know?</h2>
-    </div>
 
+    </section>
+    <section id="legal_slider">
+        <div class="section_cntainer blur_bg">
+            <div class="mb-3">
+                <p class="section_title text-white">Did You Know!</p>
+            </div>
+            <!-- Slider -->
+            <app-slider-component [sliderType]="'news'"></app-slider-component>
+        </div>
+    </section>
+    
+    <section id="about_us">
+        <div class="section-cntainer">
+            <div>
+                <p class="section_title">About Us</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12 hero_img_wrapper">
+                    <img class="rounded-4  object-fit-cover img-fluid " src="../../../assets/about-img1.jpg" alt="Adv Ashok Sharma" width="70%">
+                </div>
+                <div class="col-md-6 col-12 hero_text_wrapper mt-3 mt-md-0 text-justify">
+                    <p class="text-break section_p"><span class="section_sub_heading bg-black text-white px-1 rounded-4 ">Ashokkumar Sharma</span>&nbsp;,Certified by the Bar Council of 
+                        India and a proud member of The Surat District Bar Association. Be it <span class="text-info-emphasis fw-medium">Income Tax - GST - Constitutional/Criminal Law - Revenue or Real 
+                        Estate concerns</span>, Adv Sharma is your go-to expert for all your legal needs.
+                        <br>
+                        With over 3 decades of experience in the field of accounting and four years of dedicated practice 
+                        in advocacy, Ashokkumar Sharma has established himself as one of Surat's leading advocates in taxation 
+                        and revenue matters. </p>
+                        <p class="fs-4 text-break fw-medium  text-center oswld">KNOWLEDGE &#x2022; EXPERIENCE &#x2022; PROFESSIONALISM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="rounded-3 border border-2 border-black">
+        <div class="section-cntainer">
+            <div>
+                <p class="section_title">What We Offer</p>
+            </div>
+            <div class="hero_text_wrapper">
+                <p class="section_p text-center">We provide an extensive array of services tailored to meet your needs!</p>
+            </div>
+            <div class="bg-black ">
+             <app-slider-component [sliderType]="'services'"></app-slider-component>
+            </div>
+            <div class="d-flex justify-content-center mt-4">
+                <div (click)="OpenServices()" class="buttn">
+                    <span class="circle">
+                      <i class="fa-solid fa-angle-right"></i>
+                    </span>
+                    <span class="text">All Services</span>
+                </div>
+                </div>
+        </div>
+    </section>
+   
+    <section id="vision" class="bg-black text-white px-3 rounded-3 ">   
+        <div class="section-cntainer">
+            <div>
+                <p class="section_title">Experience makes the Difference</p>
+            </div>
+            
+            <div class="hero_text_wrapper">
+               <p class="section_sub_heading text-wrap ">Why choose Advocate Sharma&nbsp;<i class="fa-solid fa-circle-question fa-xl" style="color:rgba(53, 255, 255, 0.76);"></i></p> 
+              
+                <ul class="section_p">
+                   
+                    <li>
+                        <i class="fa-solid fa-crosshairs fa-xl" style="color: #ffffff;"></i>
+                        <span class="hghlghtd_text">Precision in Taxation and Revenue Matters:</span> Specialization in Income Tax, GST, and Constitutional Law ensures meticulous handling of your financial concerns.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-handshake fa-xl" style="color: #ffffff;"></i>
+                        <span class="hghlghtd_text">Unwavering Commitment to Justice:</span> With a deep-rooted understanding of law, we will champion your cause with unwavering dedication.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-scale-balanced fa-xl" style="color: #ffffff;"></i>
+                        <span class="hghlghtd_text">Comprehensive Legal Support:</span> Whether it's Criminal Law, Revenue Services, or Real Estate Laws, Our services are tailored to your unique needs.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-gavel fa-xl" style="color: #ffffff;"></i>
+                        <span class="hghlghtd_text">Surat's Premier Advocate:</span> Located in Surat, Gujarat, we are not just a choice; but your trusted partner in legal success.
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+    
 </div>
