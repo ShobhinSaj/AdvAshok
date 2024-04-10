@@ -1,0 +1,87 @@
+<div class="mb-3">
+    <div class="form_wrapper">
+        <div><p class="section_title">Request a Free Consultation!</p></div>
+        <form class="row g-3" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="col-12 col-md-6 form-floating">
+                    <input type="text" class="form-control" id="fname" formControlName="firstName" [ngClass]="getFormControlClasses(contactForm.controls['firstName'])" placeholder="John" required>
+                    <label for="fname" class="form-label">First Name<span class="text-danger">*</span></label>
+                    <div class="invalid-feedback">
+                        First Name required
+                    </div>
+            </div>
+            <div class="col-12 col-md-6 form-floating">
+                    <input type="text" class="form-control" formControlName="lastName" id="lname" [ngClass]="getFormControlClasses(contactForm.controls['lastName'])" placeholder="Doe" required>
+                    <label for="lname" class="form-label">Last Name<span class="text-danger">*</span></label>
+                    <div class="invalid-feedback">
+                        Last Name required
+                    </div>
+            </div>
+            <div class="col-12 form-floating">
+                <input type="email" class="form-control" formControlName="emailAddr" id="email" [ngClass]="getFormControlClasses(contactForm.controls['emailAddr'])" placeholder="johndoe@xyzmail.com" required>
+                <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
+                <div class="invalid-feedback">
+                    Valid Email Required
+                </div>
+            </div>
+            <div class="col-12 form-floating">
+                <input type="tel" class="form-control" formControlName="phoneNum" id="phone" [ngClass]="getFormControlClasses(contactForm.controls['phoneNum'])" placeholder="+1 234 567 0000" required>
+                <label for="phone" class="form-label">Phone Number<span class="text-danger">*</span></label>
+                <div class="invalid-feedback">
+                    Phone Number Required
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="msg" class="form-label">Your Message<span class="text-danger">*</span></label>
+                <textarea type="text" formControlName="message" class="form-control" rows="5" id="msg" [ngClass]="getFormControlClasses(contactForm.controls['message'])" required></textarea>
+               
+                <div class="invalid-feedback">
+                    Please Enter your Message!
+                </div>
+            </div>
+            <div class="row justify-content-between my-3">
+              <div class="col-12 col-md-6 align-content-center  d-flex justify-content-center align-items-center ">
+                <div class="form-check">
+                  <input class="form-check-input" formControlName="agreePolicy" type="checkbox" value="" [ngClass]="getFormControlClasses(contactForm.controls['agreePolicy'])" id="invalidCheck" required>
+                  <label class="form-check-label" for="invalidCheck">
+                    Agree to <a type="button" data-bs-toggle="modal" data-bs-target="#privcyModal" class="privcy_policy">Privacy Policy</a>
+                  </label>
+                  
+                <!-- Modal -->
+                <div class="modal fade" id="privcyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Privacy Policy</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        We value your privacy. When you submit forms on our website, we collect essential information such 
+                        as your :<br>
+                        &bull;<strong>Name</strong><br>
+                        &bull;<strong>Email address</strong><br>
+                        &bull;<strong>Phone Number</strong><br>Rest assured that we handle this data with utmost care and only use it for 
+                        communication, legal services, and relevant updates. We do not share your personal information with 
+                        third parties unless required by law. Your security matters to us, and we take reasonable measures to 
+                        protect your data. If you have any questions or need assistance, feel free to reach out at <a href="mailto:advashoksharma1973@gmail.com">advashoksharma1973&#64;gmail.com</a>.
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal End-->
+                  <div class="invalid-feedback">
+                    You must agree before submitting!
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 d-flex justify-content-center ">
+                <button class="main_btn" [disabled]="contactForm.invalid" type="submit">Send Message</button>
+              </div>
+          </div>
+          </form>     
+    </div>
+   
+    
+</div>

@@ -1,0 +1,30 @@
+#main_banner{
+    background: #454545 url("../../../assets/gavel-scaled.jpg") no-repeat center;
+    background-size: cover;
+    margin-right: 0;
+    margin-left: 0;
+}
+.banner_title{
+    font-family: var(--fs-heading);
+    font-size: calc(var(--fs-xl) - 0.5rem);
+}
+
+#service_list{
+    .card{
+        filter: drop-shadow(12px 10px 13px rgba(59, 59, 59, 0.76));
+   }
+    
+    .section_title{
+        font-size: var(--fs-500);
+    }
+    .section_p{
+    font-size:calc(var(--fs-400) - 5px);
+    font-weight: 500;
+    }
+}
+
+@media screen and (max-width:750px) {
+#service_list{
+    margin: 0 3rem;
+}
+}

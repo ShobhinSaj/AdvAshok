@@ -1,0 +1,97 @@
+
+
+<main>
+  <header class="primary-header d-flex align-items-center justify-content-between p-1 bg-black fixed-top ">
+    <div class="logo">
+      <a routerLink="/home">
+      <img src="assets/client_logo1.svg" class="logo-img rounded-5" width="190px">
+      </a>
+    </div>
+    
+    <!-- Navbar Toggler -->
+    <div class="mobile-nav-toggle"  aria-controls="primary-navigation" [attr.aria-expanded]="isVisible ? 'true' : 'false'">
+      <span class="visually-hidden">Menu</span>
+      <i (click)="mobileMenu()" class="fa-solid fa-2xl" [ngClass]="{'fa-bars-staggered': !isVisible, 'fa-xmark': isVisible}"
+      [style.color]="isVisible ? 'red' : '#74fd4e'"></i>
+    </div>
+    <!-- Navbar -->
+    
+    <nav class="me-5">
+
+      <ul id="primary-navigation" [attr.data-visible]="isVisible ? 'true' : 'false'" class="d-flex list-unstyled heebo">
+        <li><a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page">Home</a></li>
+        <li><a routerLink="/services" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page">Services</a></li>
+        <li><a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Scroll to Top Button-->
+  <button
+    type="button"
+    class="btn scroll-to-top"
+    (click)="scrollToTop()"
+    [hidden]="!showScrollToTop">
+    <i class="fa-solid fa-arrow-up-from-bracket fa-2xl" style="color: #44fd94;"></i>
+</button>
+  <router-outlet></router-outlet> 
+  <footer
+    class="border-top border-3 border-success footer bg-black text-white text-center">
+    <div class="row mt-3">
+      <div class="col-12 col-md-6 border-3 border-end border-white mb-2 ">
+        <img src="assets/client_logo1.svg" class="rounded-5" alt="advashok" width="200px">
+      </div>
+      <div
+        class="col-12 col-md-6 text-center d-flex justify-content-center align-items-center">
+        <div
+          class="container footr_call border border-2 border-white rounded-2 p-2 mb-2"
+          style="width: 220px;">
+          <!-- <img
+            src="assets/vecteezy_realistic-phone-call-button-hotline-and-call-center-icon_18842694.png"
+            width="40px"> -->
+            <i class="fa-solid fa-phone-volume fa-xl" style="color: #6df55b;"></i>
+          <div class="d-inline fw-bold heebo ps-2"
+            style="width: fit-content;"><a class="text-decoration-none text-white " href="tel:+919825512069">+91 9825512069</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-1 p-0">
+      <div class="col-12 p-0"><p class="text-white madimi fs-4">Follow
+          Us</p></div>
+      <div class="col-12">
+        <div
+          class="container border-bottom  border-bottom-3 border-white mx-auto">
+          <ul class="wrapper">
+            <li class="icon facebook">
+              <a href="https://www.facebook.com/sharma.ashokkumar.1973" target="_blank">
+              <span class="tooltip">Facebook</span>
+              <span><i class="fa-brands fa-facebook fa-xl"></i></span>
+            </a>
+            </li>
+            <li class="icon instagram">
+              <a href="https://www.instagram.com/advashoksharma_/" target="_blank">
+              <span class="tooltip">Instagram</span>
+              <span><i class="fab fa-instagram fa-xl"></i></span>
+            </a>
+            </li>
+            <li class="icon twitter">
+              <a href="https://twitter.com/advashoksharma_" target="_blank">
+              <span class="tooltip">Twitter</span>
+              <span><i class="fa-brands fa-square-x-twitter fa-xl"></i></span>
+            </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="roboto text-white"> &copy;2024 &bull; All Rights Reserved By
+      Ashok Sharma</div>
+    <div class="container d-flex align-items-baseline  justify-content-center  my-1 mx-auto">
+      <div class="roboto text-white">Developed By:&nbsp;&nbsp;</div>
+      <div><img src="assets/webflex_logo_white.png"
+          width="100px"></div>
+    </div>
+  </footer>
+
+</main>

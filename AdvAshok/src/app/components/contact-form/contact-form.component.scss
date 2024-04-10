@@ -1,0 +1,74 @@
+// @import 'bootstrap/scss/bootstrap';
+// *{
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+.form_wrapper{
+  background-color: hsla(0, 5%, 57%, 0.2);
+  padding: 2% 10%;
+  margin: 0 8rem;
+  border-radius: 15px;
+  border:2px solid black;
+}
+form{
+ margin-top: 2%;
+}
+
+
+//Button
+.main_btn {
+  font-family: "Roboto",sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  align-self: center;
+  letter-spacing: 1px;
+  padding: 6px 12px;
+  background-color: #4bdaa1;
+  border: 2px solid #111827;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+  
+}
+.main_btn:disabled{
+  border: 2px solid #e22121;
+  background-color: #989898;
+  color: white;
+  cursor: not-allowed;
+}
+.main_btn:disabled:hover{
+  background-color: #989898;
+    color: white;
+    
+}
+.main_btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #111827;
+  border-radius: inherit;
+  translate: 6px 6px;
+  transition: 0.25s;
+  z-index: -1;
+}
+
+.main_btn:hover::after {
+  translate: 0;
+}
+.main_btn:hover {
+  background-color: #02aa67;
+  color: #f9fafb;
+}
+
+@media screen and (max-width:766px) {
+  .form_wrapper{
+    margin: 0 2rem;
+  }
+}
+@media screen and (max-width:950px) {
+  .privacy_cntainr{
+    flex-direction: column;
+  }
+}

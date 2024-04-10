@@ -27,10 +27,6 @@ The following features are planned for the AdvAshok website:
    - Contact form for clients to reach out for legal assistance.
    - Direct contact details for quick communication.
 
-4. **About Advocate Sharma:**
-   - Comprehensive background information about Advocate Ashok Kumar Sharma.
-   - Highlights of significant cases and achievements.
-
 ## Getting Started
 
 Follow these steps to set up and run the AdvAshok website locally:

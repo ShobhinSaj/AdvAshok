@@ -1,0 +1,53 @@
+<!-- Example: Display news articles if sliderType is 'news' -->
+<div *ngIf="sliderType === 'news'">
+    <!-- News article markup -->
+    <ngx-slick-carousel class="carousel" 
+                        #slickModal="slick-carousel" 
+                        [config]="slideConfig" 
+                        (init)="slickInit($event)"
+                        (breakpoint)="breakpoint($event)"
+                        (afterChange)="afterChange($event)"
+                        (beforeChange)="beforeChange($event)">
+        <!-- @for (slide of slides; track slide.img) { -->
+            <div ngxSlickItem *ngFor="let item of newsData" class="slide text-center">
+              <div class="card bg-transparent border-0 text-white">
+                <!-- <div *ngIf="item.urlToImage; else noImage" class="d-flex justify-contents-center">
+                  <img src="{{item.urlToImage}}" class=" rounded-3" width="100%" alt="news image">
+                </div>
+                <ng-template #noImage class=""> 
+                  <img src="../../../assets/hero_img_pic1.jpg" class="card-img-top object-fit-contain rounded-3" width="100%" alt="news image">
+                </ng-template> -->
+                <div class="card-body">
+                  <h5 class="card-title">{{item.title}}</h5>
+                  <p class="card-text">{{item.description}}</p>
+                  <a href="{{item.url}}" target="_blank" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            </div>
+        <!-- } -->
+    </ngx-slick-carousel>
+  </div>
+  
+  <!-- Example: Display services if sliderType is 'services' -->
+  <div *ngIf="sliderType === 'services'">
+    <!-- Service offerings markup -->
+    <ngx-slick-carousel class="carousel" 
+                        #slickModal="slick-carousel" 
+                        [config]="slideConfig" 
+                        (init)="slickInit($event)"
+                        (breakpoint)="breakpoint($event)"
+                        (afterChange)="afterChange($event)"
+                        (beforeChange)="beforeChange($event)">
+        <!-- @for (slide of slides; track slide.img) { -->
+            <div ngxSlickItem *ngFor="let service of serviceList" class="slide text-center text-white fw-medium">
+              <h3 class="py-3 ">{{ service }}</h3>
+            </div>
+        <!-- } -->
+    </ngx-slick-carousel>
+    <!-- <button (click)="addSlide()">Add</button> -->
+    <!-- <button (click)="removeSlide()">Remove</button>
+    <button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
+    <button (click)="slickModal.unslick()">unslick</button> -->
+  </div>
+
+    

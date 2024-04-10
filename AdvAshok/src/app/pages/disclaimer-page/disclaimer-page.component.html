@@ -1,0 +1,24 @@
+
+<div class="disclaimr_wrapper"  [ngClass]="{'d-none':responseAgreed}">
+    <div class="disclaimr_cntainer">
+       <div>
+           <h1 class="section_title">DISCLAIMER & CONFIRMATION</h1>
+           <p class="section_p">As per the rules of the Bar Council of India, we are not permitted to solicit work and advertise. The user 
+            acknowledges the following:</p>
+            <ul class="ps-3">
+                <li class="section_p">There has been no advertisement, personal communication, solicitation, invitation or inducement of any 
+                    sort whatsoever from us or any of our members to solicit any work through this website;</li>
+                <li class="section_p">The user wishes to gain more information about us for his/her own information and use;</li>
+                <li class="section_p">The information about us is provided to the user only on his/her specific request and any 
+                    information obtained or materials downloaded from this website is completely at the user's volition and any 
+                    transmission, receipt or use of this site would not create any lawyer-client relationship.</li>
+            </ul>
+            
+                <div class="d-flex justify-content-around ">
+                    <button (click)="handleAgree()" class="main_btn">
+                       I Agree
+                    </button>
+                </div>
+        </div>
+    </div>
+</div>
