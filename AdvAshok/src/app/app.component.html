@@ -22,6 +22,7 @@
         <li><a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page">Home</a></li>
         <li><a routerLink="/services" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page">Services</a></li>
         <li><a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page">Contact</a></li>
+        <li><a type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Disclaimer</a></li>
       </ul>
     </nav>
   </header>
@@ -33,6 +34,33 @@
     [hidden]="!showScrollToTop">
     <i class="fa-solid fa-arrow-up-from-bracket fa-2xl" style="color: #44fd94;"></i>
 </button>
+    <!-- Disclaimer -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">DISCLAIMER & CONFIRMATION</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p class="section_p">As per the rules of the Bar Council of India, we are not permitted to solicit work and advertise. The user 
+                  acknowledges the following:</p>
+                  <ul class="ps-3">
+                      <li class="section_p">There has been no advertisement, personal communication, solicitation, invitation or inducement of any 
+                          sort whatsoever from us or any of our members to solicit any work through this website;</li>
+                      <li class="section_p">The user wishes to gain more information about us for his/her own information and use;</li>
+                      <li class="section_p">The information about us is provided to the user only on his/her specific request and any 
+                          information obtained or materials downloaded from this website is completely at the user's volition and any 
+                          transmission, receipt or use of this site would not create any lawyer-client relationship.</li>
+                  </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Disclaimer End -->
   <router-outlet></router-outlet> 
   <footer
     class="border-top border-3 border-success footer bg-black text-white text-center">
