@@ -15,7 +15,7 @@ export class ContentFetchService {
       const req=new Request(this.url);
       let sliderData=await fetch(req);
       let response=await sliderData.json();
-      console.log(response);
+      // console.log(response);
       this.data=response.articles;
 
       return this.data;

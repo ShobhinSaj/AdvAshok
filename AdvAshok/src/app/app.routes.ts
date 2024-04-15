@@ -11,11 +11,6 @@ export const routes: Routes = [
         component:HomePageComponent,
         title:'AdvAshok'
     },
-    {
-        'path':'home',
-        component:HomePageComponent,
-        title:'AdvAshok-Home'
-    },
     {   'path':'services',
         component:ServicesPageComponent,
         title:'AdvAshok-Services'

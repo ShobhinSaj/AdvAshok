@@ -3,7 +3,7 @@
 <main>
   <header class="primary-header d-flex align-items-center justify-content-between p-1 bg-black fixed-top ">
     <div class="logo">
-      <a routerLink="/home">
+      <a routerLink="/">
       <img src="assets/client_logo1.svg" class="logo-img rounded-5" width="190px">
       </a>
     </div>
@@ -19,7 +19,7 @@
     <nav class="me-5">
 
       <ul id="primary-navigation" [attr.data-visible]="isVisible ? 'true' : 'false'" class="d-flex list-unstyled heebo">
-        <li><a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page">Home</a></li>
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page">Home</a></li>
         <li><a routerLink="/services" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page">Services</a></li>
         <li><a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page">Contact</a></li>
         <li><a type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Disclaimer</a></li>
@@ -34,7 +34,8 @@
     [hidden]="!showScrollToTop">
     <i class="fa-solid fa-arrow-up-from-bracket fa-2xl" style="color: #44fd94;"></i>
 </button>
-    <!-- Disclaimer -->
+    
+  <!-- Disclaimer -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -43,25 +44,27 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-              <p class="section_p">As per the rules of the Bar Council of India, we are not permitted to solicit work and advertise. The user 
-                  acknowledges the following:</p>
+             As per the rules of the Bar Council of India, we are not permitted to solicit work and advertise. The user 
+                  acknowledges the following:
                   <ul class="ps-3">
-                      <li class="section_p">There has been no advertisement, personal communication, solicitation, invitation or inducement of any 
+                      <li>There has been no advertisement, personal communication, solicitation, invitation or inducement of any 
                           sort whatsoever from us or any of our members to solicit any work through this website;</li>
-                      <li class="section_p">The user wishes to gain more information about us for his/her own information and use;</li>
-                      <li class="section_p">The information about us is provided to the user only on his/her specific request and any 
+                      <li>The user wishes to gain more information about us for his/her own information and use;</li>
+                      <li>The information about us is provided to the user only on his/her specific request and any 
                           information obtained or materials downloaded from this website is completely at the user's volition and any 
                           transmission, receipt or use of this site would not create any lawyer-client relationship.</li>
                   </ul>
           </div>
-          <div class="modal-footer">
+          <div class="modal-footer justify-content-center ">
             <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
           </div>
         </div>
       </div>
     </div>
     <!-- Disclaimer End -->
+    
   <router-outlet></router-outlet> 
+
   <footer
     class="border-top border-3 border-success footer bg-black text-white text-center">
     <div class="row mt-3">
