@@ -4,6 +4,12 @@
     margin-right: 0;
     margin-left: 0;
     padding-top: 10vh;
+    ::after{
+        content: "Image by Sora Shimazaki-Pexels.com-https://www.pexels.com/photo/close-up-photo-of-wooden-gavel-5668473/";
+        position: absolute;
+        left: -9999px;
+        visibility: hidden;
+      }
 }
 .banner_title{
     font-family: var(--fs-heading);

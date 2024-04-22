@@ -74,6 +74,12 @@
     backdrop-filter: blur(6.7px);
     -webkit-backdrop-filter: blur(6.7px);
     border-radius: 10px;
+    ::after{
+      content: "Image by Pavel Danilyuk-Pexels.com";
+      position: absolute;
+      left: -9999px;
+      visibility: hidden;
+    }
 }
   /*About Us Slider Section*/
  #about_us .section_p .hghlghtd_text{
